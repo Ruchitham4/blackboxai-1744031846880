@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Claims | Healthcare Queue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-hospital-alt text-blue-500 mr-2"></i>
+                    <span class="text-xl font-semibold text-gray-800">Healthcare Queue</span>
+                </div>
+                <div class="flex items-center">
+                    <span id="currentPatient" class="text-sm text-gray-500 mr-4"></span>
+                    <button onclick="logout()" class="text-sm text-blue-600 hover:text-blue-800">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">My Claims</h2>
+        
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+            <div class="grid grid-cols-12 bg-gray-50 p-4 font-medium text-gray-700">
+                <div class="col-span-1">ID</div>
+                <div class="col-span-3">Type</div>
+                <div class="col-span-2">Priority</div>
+                <div class="col-span-2">Status</div>
+                <div class="col-span-2">Submitted</div>
+                <div class="col-span-2">Actions</div>
+            </div>
+            
+            <div id="patientClaims" class="divide-y divide-gray-200">
+                <!-- Patient's claims will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
